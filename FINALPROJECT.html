@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>drones</title>
+			<link rel="icon" type="image" href="LOGO.png">
+			<link rel="stylesheet" href="final.css">
+		</head>
+		
+		
+		<body>
+	
+			<ul class = "navBar">
+			  <li><a href="FINALPROJECT.html" button onclick="about()">About</a></li>
+			  <li><a href="FINALPROJECT.html" button onclick="home()">Home</a></li> 
+			</ul>
+			
+			<div class ="txt">
+			<h1 class = "1">drone</h1>
+			<h3 class = "2">ˈdrōn </h3>
+			<br>
+
+			<h4 class = "3">verb</h4>
+					<p> make a continuous low humming sound.</p> 
+					<p>"in the far distance a machine droned"</p> 
+			
+			<h4 class = "3">noun</h4>
+				<h5 class= "4">1. </h5><p>a low continuous humming sound.</p> 
+					<p> "he nodded off to the drone of the car engine"</p> 
+					
+					<br>
+				
+				<h5 class= "4">2.</h5><p> a continuous musical note of low pitch.</p> 
+					<p> "the drone rose by a third to A"</p> 
+			</div>
+			
+			<div class ="txt2">
+			<h1 class = "1">Origin</h1>
+				<p>The origin of drones dates back to the early 20th century, initially designed for military purposes. However, drones have </p>
+				now become an integral part of our daily lives, impacting various aspects with advancements in technology,drones have</p>		
+				transitioned from military reconnaissance to tools widely used in photography, videography, and social media content creation.</p>
+				They have also found applications in package delivery, revolutionizing the way goods are transported. In agriculture, drones </p>
+				assist in monitoring crops and optimizing farming practices. Additionally, drones play a vital role in search and rescue operations,</p>
+				reaching inaccessible areas and aiding emergency responders. The recreational use of drones has also surged, attracting </p>
+				hobbyists and enthusiasts. However, concerns over safety, privacy, and regulation have prompted the establishment </p>
+				of guidelines to ensure responsible drone use.  Overall, drones have significantly influenced our daily lives, </p> 
+				providing new possibilities and improving efficiency in various industries. </p>
+				
+				<br>
+			
+			
+			<h1 class = "2">Purpose </h1>
+				<p>The purpose of drones, or unmanned aerial vehicles (UAVs), is multifaceted. Drones are designed to perform tasks that</p>
+				are either too dangerous or impractical for humans to undertake. They serve a wide range of purposes, including military </p>
+				reconnaissance, surveillance, and combat missions. Drones are also used in civilian applications such as aerial photography </p>
+				and videography, package delivery, agriculture, infrastructure inspection, search and rescue operations, environmental </p> 
+				monitoring, and scientific research. By providing aerial perspectives, collecting data, and executing tasks with precision, </p> 
+				drones enhance efficiency, safety, and convenience in various fields, making them invaluable tools in our modern world. </p> 
+			</div>
+		
+			<img id="image" src="parts.png" width="1000px" height="600px">
+			
+			<div class ="pushButtons">
+			<button id="button1" onclick="a()"> < drone struture </button>  
+			<button id="button2" onclick="b()"> fundamental drone anatomy > </button> 
+			<p>(trying clicking any of the buttons!)</p>
+			</div>
+			
+			<div class="footer">
+				<div class="counterText">Visit Count:</div>
+				<div class="counter"></div>
+				<button id="reset">Reset</button>
+			</div>
+		</body>
+		
+		<br><br>
+
+		<script>
+		
+		function home() {
+			alert("you are home ;)");
+		}
+		
+		function about() {
+			alert("this site stirves to aid the information needed about drones");
+		}
+		
+		
+		function b() { 
+		
+			document.getElementById("image").src="parts2.png"; 
+			}
+			
+			function a() {
+			
+			document.getElementById("image").src="parts.png";
+			}
+		
+		var counterContainer = document.querySelector(".counter");
+			var resetButton = document.querySelector("#reset");
+			var visitCount = localStorage.getItem("page_view");
+
+
+			if (visitCount) {
+			  visitCount = Number(visitCount) + 1;
+			  localStorage.setItem("page_view", visitCount);
+			  
+			} else {
+			  visitCount = 1;
+			  localStorage.setItem("page_view", 1);
+			}
+			
+			counterContainer.innerHTML = visitCount;
+
+
+			resetButton.addEventListener("click", () => {
+			  visitCount = 1;
+			  localStorage.setItem("page_view", 1);
+			  counterContainer.innerHTML = visitCount;
+			});
+		
+		</script>
+
+	</html>
